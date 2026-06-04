@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frutiger Aero Interactive Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="prototype" aria-label="Interactive Frutiger Aero desktop prototype">
+      <img class="scene-bg" src="assets/aquarium-room-bg.png" alt="" draggable="false" />
+
+      <section class="status-widget" aria-label="Weather and calendar">
+        <img class="weather-icon" src="assets/weather-sun-clouds.png" alt="" draggable="false" />
+        <div class="weather-copy">
+          <strong>Sunny 78&deg;</strong>
+          <em>Maldives</em>
+          <span>8:30 AM</span>
+        </div>
+        <img class="calendar-icon" src="assets/calendar-aero.png" alt="" draggable="false" />
+        <div class="score-pill"><img src="assets/star.png" alt="" draggable="false" /> x 1000</div>
+      </section>
+
+      <section id="musicPlayer" class="music-player" data-state="open" aria-label="Music player">
+        <audio id="songAudio" src="assets/song1.mp3" preload="auto"></audio>
+
+        <div class="full-player">
+          <img src="assets/music-player-full.png" alt="Glossy music player" draggable="false" />
+          <button class="player-hotspot player-minimize" type="button" aria-label="Minimize music player"></button>
+          <button class="player-hotspot player-close" type="button" aria-label="Close music player"></button>
+          <button class="player-hotspot player-play" type="button" aria-label="Play song"></button>
+          <button class="player-hotspot player-stop" type="button" aria-label="Stop song"></button>
+        </div>
+
+        <div class="mini-player" aria-label="Minimized music player">
+          <img src="assets/player-mini-aero.png" alt="Minimized music controls" draggable="false" />
+          <button class="mini-play" type="button" aria-label="Play song"></button>
+          <button class="mini-restore" type="button" aria-label="Restore music player">
+            <img src="assets/dock-maximize.png" alt="" draggable="false" />
+          </button>
+        </div>
+      </section>
+
+      <nav id="dock" class="dock" aria-label="Desktop dock" data-state="expanded">
+        <img class="dock-line" src="assets/dock-line.png" alt="" draggable="false" />
+        <button id="userButton" class="dock-button dock-collapsible" type="button" aria-label="Open user profile">
+          <img src="assets/dock-person-button.png" alt="" draggable="false" />
+        </button>
+        <button id="friendsButton" class="dock-button dock-collapsible" type="button" aria-label="Open friends list">
+          <img src="assets/dock-people-button.png" alt="" draggable="false" />
+        </button>
+        <button id="internetButton" class="dock-button dock-collapsible" type="button" aria-label="Open applications">
+          <img src="assets/dock-world-button.png" alt="" draggable="false" />
+        </button>
+        <button id="dockMusicButton" class="dock-button dock-collapsible" type="button" aria-label="Open music player">
+          <img src="assets/dock-music-button.png" alt="" draggable="false" />
+        </button>
+        <button id="gearButton" class="dock-button" type="button" aria-label="Toggle folder">
+          <img src="assets/dock-gear-button.png" alt="" draggable="false" data-gear-src="assets/dock-gear-button.png" data-folder-src="assets/dock-folder-button.png" />
+        </button>
+        <button id="dockCollapseButton" class="dock-collapse-button" type="button" aria-label="Minimize dock">
+          <img src="assets/dock-collapse-minimize.png" alt="" draggable="false" />
+        </button>
+      </nav>
+
+      <section id="userPopup" class="user-popup" data-state="closed" aria-label="User information">
+        <div class="user-popup-window">
+          <img src="assets/user-window-popup-2.png" alt="User information window" draggable="false" />
+          <button class="user-popup-hotspot user-popup-close" type="button" aria-label="Close user window"></button>
+        </div>
+      </section>
+
+      <section id="friendsPopup" class="friends-popup" data-state="closed" aria-label="Friends list">
+        <div class="friends-popup-window">
+          <img src="assets/friends-list-popup.png" alt="Friends list window" draggable="false" />
+          <button class="friends-popup-hotspot friends-popup-close" type="button" aria-label="Close friends list"></button>
+        </div>
+      </section>
+
+      <section id="applicationsPopup" class="applications-popup" data-state="closed" aria-label="Applications">
+        <div class="applications-popup-window">
+          <img src="assets/applications-popup.png" alt="Applications window" draggable="false" />
+          <button class="applications-popup-hotspot applications-popup-close" type="button" aria-label="Close applications"></button>
+        </div>
+      </section>
+
+      <img id="customCursor" class="custom-cursor" src="assets/cursor-blue-aero.png" alt="" draggable="false" />
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
